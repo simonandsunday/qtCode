@@ -1,0 +1,9 @@
+.ignore
+arithmetic/Makefile
+arithmetic/arithmetic.pro.user.dab7bcc.3.3-pre1
+arithmetic/list/Makefile
+arithmetic/list/Makefile.Debug
+arithmetic/list/Makefile.Release
+arithmetic/list/debug/
+arithmetic/list/ui_MainWindow.h
+try/try.pro.user.dab7bcc.3.3-pre1
