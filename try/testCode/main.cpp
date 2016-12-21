@@ -7,6 +7,6 @@ int main(int argc, char *argv[])
     MainWindow w;
     w.show();
     testqstringList entity;
-    entity.testEmtity();
+    entity.readfile();
     return a.exec();
 }
