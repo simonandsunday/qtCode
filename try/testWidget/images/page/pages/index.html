@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Web Plugin</title>
+<!-- [script] -->
+<script type="text/javascript">
+
+function testsignalfunc(datajson,returnjson){
+  alert(datajson);
+  
+}
+function testSlot(){
+  viewplugin.testSlot("sdfsdfdsf");
+}
+</script>
+<!-- [script] -->
+</head>
+
+<body>
+
+
+
+<button onclick="testSlot()">testSlot</button>
+<!-- [embedded object] -->
+<object type="text/csv;header=present;charset=utf8"
+        data="qrc:/data/accounts.csv"
+        width="0" height="0">
+</object>
+<!-- [embedded object] -->
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<style>
+body{
+	margin:5px; ; 
+
+}
+.scale_panel{
+	font-size:12px;
+	color:#000000;
+	width:510px;
+	position:absolute; 
+	line-height:18px; 
+	left:120px;
+	top:-0px;
+
+}
+.scale_panel .r{
+	float:right;
+
+}
+.scale span{
+	background:url(scroll.gif) no-repeat; 
+	width:8px;
+	height:16px; 
+	position:absolute; 
+	left:25px;
+	top:-5px;
+	cursor:pointer;
+
+}
+.scale{ background-repeat: repeat-x; background-position: 0 100%; background-color: #E4E4E4; border-left: 1px #83BBD9 solid;  width: 500px; height: 3px; position: relative; font-size: 0px; border-radius: 3px; }
+.scale div{ background-repeat: repeat-x; background-color: #3BE3FF; width: 0px; position: absolute; height: 3px; width: 0; left: 0; bottom: 0; }
+li{
+	font-size:12px;
+	line-height:50px;
+	position:relative; 
+	height:50px; 
+	list-style:none;
+	 background: -webkit-radial-gradient(#aaaaaa, #aaaaaa 70%) no-repeat #eb7e15;
+  background: radial-gradient(#aaaaaa, #aaaaaa 70%) no-repeat #eb7e15;
+}
+</style>

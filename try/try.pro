@@ -1,3 +1,4 @@
 TEMPLATE = subdirs
 SUBDIRS += \
-testCode
+testCode \
+    testWidget

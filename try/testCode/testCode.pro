@@ -14,9 +14,11 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         MainWindow.cpp \
-    testqstringList.cpp
+    testqstringList.cpp \
+    testProperty.cpp
 
 HEADERS  += MainWindow.h \
-    testqstringList.h
+    testqstringList.h \
+    testProperty.h
 
 FORMS    += MainWindow.ui
