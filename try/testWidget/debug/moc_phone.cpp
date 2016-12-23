@@ -40,7 +40,7 @@ static const uint qt_meta_data_phone[] = {
      189,    6,    6,    6, 0x08,
      215,    6,    6,    6, 0x08,
      241,    6,    6,    6, 0x08,
-     268,    6,    6,    6, 0x08,
+     267,    6,    6,    6, 0x08,
      294,    6,    6,    6, 0x08,
      321,    6,    6,    6, 0x08,
      351,    6,    6,    6, 0x08,
@@ -49,20 +49,20 @@ static const uint qt_meta_data_phone[] = {
 };
 
 static const char qt_meta_stringdata_phone[] = {
-    "phone\0\0on_pushButton_1_clicked()\0"
-    "on_pushButton_2_clicked()\0"
-    "on_pushButton_3_clicked()\0"
-    "on_pushButton_4_clicked()\0"
-    "on_pushButton_5_clicked()\0"
-    "on_pushButton_6_clicked()\0"
-    "on_pushButton_7_clicked()\0"
-    "on_pushButton_8_clicked()\0"
-    "on_pushButton_9_clicked()\0"
-    "on_pushButton_10_clicked()\0"
-    "on_pushButton_0_clicked()\0"
-    "on_pushButton_12_clicked()\0"
-    "on_pushButton_audio_clicked()\0"
-    "on_pushButton_video_clicked()\0"
+    "phone\0\0on_toolButton_1_clicked()\0"
+    "on_toolButton_2_clicked()\0"
+    "on_toolButton_3_clicked()\0"
+    "on_toolButton_4_clicked()\0"
+    "on_toolButton_5_clicked()\0"
+    "on_toolButton_6_clicked()\0"
+    "on_toolButton_7_clicked()\0"
+    "on_toolButton_8_clicked()\0"
+    "on_toolButton_9_clicked()\0"
+    "on_toolButton_0_clicked()\0"
+    "on_toolButton_10_clicked()\0"
+    "on_toolButton_12_clicked()\0"
+    "on_toolButton_audio_clicked()\0"
+    "on_toolButton_video_clicked()\0"
 };
 
 void phone::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -71,20 +71,20 @@ void phone::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
         Q_ASSERT(staticMetaObject.cast(_o));
         phone *_t = static_cast<phone *>(_o);
         switch (_id) {
-        case 0: _t->on_pushButton_1_clicked(); break;
-        case 1: _t->on_pushButton_2_clicked(); break;
-        case 2: _t->on_pushButton_3_clicked(); break;
-        case 3: _t->on_pushButton_4_clicked(); break;
-        case 4: _t->on_pushButton_5_clicked(); break;
-        case 5: _t->on_pushButton_6_clicked(); break;
-        case 6: _t->on_pushButton_7_clicked(); break;
-        case 7: _t->on_pushButton_8_clicked(); break;
-        case 8: _t->on_pushButton_9_clicked(); break;
-        case 9: _t->on_pushButton_10_clicked(); break;
-        case 10: _t->on_pushButton_0_clicked(); break;
-        case 11: _t->on_pushButton_12_clicked(); break;
-        case 12: _t->on_pushButton_audio_clicked(); break;
-        case 13: _t->on_pushButton_video_clicked(); break;
+        case 0: _t->on_toolButton_1_clicked(); break;
+        case 1: _t->on_toolButton_2_clicked(); break;
+        case 2: _t->on_toolButton_3_clicked(); break;
+        case 3: _t->on_toolButton_4_clicked(); break;
+        case 4: _t->on_toolButton_5_clicked(); break;
+        case 5: _t->on_toolButton_6_clicked(); break;
+        case 6: _t->on_toolButton_7_clicked(); break;
+        case 7: _t->on_toolButton_8_clicked(); break;
+        case 8: _t->on_toolButton_9_clicked(); break;
+        case 9: _t->on_toolButton_0_clicked(); break;
+        case 10: _t->on_toolButton_10_clicked(); break;
+        case 11: _t->on_toolButton_12_clicked(); break;
+        case 12: _t->on_toolButton_audio_clicked(); break;
+        case 13: _t->on_toolButton_video_clicked(); break;
         default: ;
         }
     }

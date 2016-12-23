@@ -14,44 +14,50 @@
    <string>Form</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
    <item>
     <widget class="QWidget" name="widget" native="true">
      <property name="styleSheet">
       <string notr="true">#widget{background-color: rgb(29, 41, 55);}
-QPushButton{
-    border: none;
-    background-color: transparent;
-	border-image: url(&quot;../images/ptzpanel/focus_zoom_lris/normal.png&quot;);
-    min-height: 26px;
-    min-width: 35px;
-	max-height: 26px;
-    max-width: 35px;
-	color: rgb(255, 255, 255);
-}
+
 QLabel { 
 
      font-weight: bold; 
      color: white; 
 }
-
 QPushButton:hover {
 	border-image: url(&quot;../images/ptzpanel/focus_zoom_lris/hover.png&quot;);
 }
 
-
+QPushButton{
+	border:none;
+    background-color: transparent;
+    border-image: url(&quot;../images/ptzpanel/focus_zoom_lris/normal.png&quot;);
+    min-height: 26px;
+    min-width: 35px;
+    max-height: 26px;
+    max-width: 35px;
+    color: rgb(255, 255, 255);
+}
 QPushButton:pressed {
 	border-image: url(&quot;../images/ptzpanel/focus_zoom_lris/pressed.png&quot;);
 }
-QLineEdit{
-background-color:rgb(50,62,78);
-border-radius:3px;
-border-color: rgb(83,95,109);
-border-style: solid;
-border-width:1px;
-color:white;
-}
 
-QLineEdit:focus {border-color: rgb(0, 111, 146);background-color: rgb(46, 68, 84);}
+
 </string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -95,7 +101,68 @@ QLineEdit:focus {border-color: rgb(0, 111, 146);background-color: rgb(46, 68, 84
              <number>9</number>
             </property>
             <item>
-             <widget class="QLineEdit" name="lineEdit_auth"/>
+             <widget class="QLineEdit" name="lineEdit_auth">
+              <property name="minimumSize">
+               <size>
+                <width>26</width>
+                <height>26</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">
+QLineEdit{
+background-color: rgb(23, 45, 61);
+border-top-left-radius:3px;
+border-bottom-left-radius:3px;
+
+border-color: rgb(69, 90, 112);
+selection-color: rgb(255, 255, 255);
+border-style: solid;
+border-width:1px;
+border-right-width:0px;
+color:white;
+}
+
+
+QLineEdit::input{
+background-color: rgb(14, 52, 71);
+}</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="toolButton">
+              <property name="minimumSize">
+               <size>
+                <width>26</width>
+                <height>26</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">
+QToolButton{
+image: url(../images/UserManagement/search/normal.png);
+border-top-right-radius:3px;
+border-bottom-right-radius:3px;
+
+background-color: rgb(23, 45, 61);
+border-color: rgb(69, 90, 112);
+border-style: solid;
+border-width:1px;
+border-left-width:0px;
+color:white;
+}
+#toolButton:hover{
+background-color: rgb(50, 45, 61);
+}
+#toolButton:pressed{
+background-color: rgb(23, 45, 61);
+}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
             </item>
            </layout>
           </widget>
@@ -445,7 +512,7 @@ QLineEdit:focus {border-color: rgb(0, 111, 146);background-color: rgb(46, 68, 84
                </size>
               </property>
               <property name="text">
-               <string>PushButton</string>
+               <string>AUDIO</string>
               </property>
              </widget>
             </item>
@@ -464,7 +531,7 @@ QLineEdit:focus {border-color: rgb(0, 111, 146);background-color: rgb(46, 68, 84
                </size>
               </property>
               <property name="text">
-               <string>PushButton</string>
+               <string>VIDEO</string>
               </property>
              </widget>
             </item>
@@ -481,7 +548,17 @@ QLineEdit:focus {border-color: rgb(0, 111, 146);background-color: rgb(46, 68, 84
 border-width: 1px;
      border-style: solid;
      border-color: white;
-}</string>
+}
+QLineEdit{
+background-color:rgb(50,62,78);
+border-radius:3px;
+border-color: rgb(83,95,109);
+border-style: solid;
+border-width:1px;
+color:white;
+}
+
+QLineEdit:focus {border-color: rgb(0, 111, 146);background-color: rgb(46, 68, 84);}</string>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_4">
          <item>

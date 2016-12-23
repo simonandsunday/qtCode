@@ -7,3 +7,10 @@ arithmetic/list/Makefile.Release
 arithmetic/list/debug/
 arithmetic/list/ui_MainWindow.h
 try/try.pro.user.dab7bcc.3.3-pre1
+arithmetic/list/release/
+arithmetic/list/ui_dir_win32/
+try/testCode/release/
+try/testCode/ui_dir_win32/
+try/testWidget/debug/
+try/testWidget/release/
+try/testWidget/ui_dir_win32/
