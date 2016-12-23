@@ -2,6 +2,7 @@
 #include<QDebug>
 #define qdebugStart() qDebug()<<"start:"<<__func__<<__LINE__
 #define qdebugEnd() qDebug()<<"end:"<<__func__<<__LINE__
+#define qdebugEx() qDebug()<<__func__<<__LINE__
 namespace ns_list{
 list::list()
 {
@@ -10,7 +11,22 @@ list::list()
 
 tagNode *list::reverse(tagNode *head)
 {
-    return NULL;
+    if(head==NULL){
+        qdebugEx();
+        return NULL;
+    }
+    tagNode *curr=head;
+    tagNode *pre=NULL;
+    while(curr!=NULL){
+        tagNode *next=curr->next;
+        curr->next=pre;
+        if(next==NULL){
+            break;
+        }
+        pre=curr;
+        curr=next;
+    }
+    return curr;
 }
 
 tagNode *list::selectSort(tagNode *head)
@@ -35,27 +51,75 @@ tagNode *list::sortInsert(tagNode *head, tagNode *node)
 
 tagNode *list::del(tagNode *head, int value)
 {
-    return NULL;
+    if(head==NULL){
+        return NULL;
+    }
+    tagNode *curr=head;
+    while(curr!=NULL){
+        tagNode *next=curr->next;
+        if(next==NULL){
+            break;
+        }
+        if(next->value==value){
+            curr->next=next->next;
+            curr=next->next;
+            delete next;
+        }else{
+            curr=next;
+        }
+    }
+    if(head->value==value){
+        curr=head->next;
+        delete head;
+        return curr;
+    }
+    return head;
 }
 
 void list::destroyList(tagNode *head)
 {
+    if(head==NULL){
+        return;
+    }
+    tagNode *curr=head;
 
+    while (curr!=NULL) {
+        tagNode *next=curr->next;
+        qdebugEx()<<"destroy node:"<<curr->num;
+        delete curr;
+        curr=NULL;
+        curr=next;
+    }
+    head=NULL;
 }
 
 tagNode *list::insert(tagNode *head, tagNode *node)
 {
-    return NULL;
+    if(head==NULL){
+        node->num=0;
+        return node;
+    }
+    tagNode *curr=head;
+    int num=1;
+    while(curr->next!=NULL){
+        curr=curr->next;
+        num=num+1;
+    }
+    node->num=num;
+    curr->next=node;
+    return head;
 }
 
 void list::print(tagNode *head)
 {
+    qDebug()<<__func__<<__LINE__<<"print";
     if(head==NULL){
+        qDebug()<<__func__<<__LINE__<<"head is null";
         return ;
     }
     tagNode *curr=head;
-    while(curr!=NULL&&curr->next!=NULL){
-        qDebug()<<"value:"<<curr->value;
+    while(curr!=NULL){
+        qDebug()<<"value:"<<curr->value<<"num:"<<curr->num;
         curr=curr->next;
     }
     return;
@@ -66,15 +130,16 @@ void list::print(tagNode *head)
 
 testList::testList()
 {
-   testReverse();
-   testSelectSort();
-   testInsertSort();
-   testBubbleSort();
-   testSortInsert();
-   testDel();
-   testDestroyList();
+   //testReverse();
+
+   //testSelectSort();
+   //testInsertSort();
+   //testBubbleSort();
+   //testSortInsert();
+   //testDel();
+   //testDestroyList();
    testInsert();
-   testPrint();
+   //testPrint();
 }
 
 void testList::testReverse()
@@ -147,7 +212,7 @@ void testList::testDel()
     tagNode *head=createRandList(10);
     list listEntity;
     listEntity.print(head);
-    head=listEntity.del(head,10);
+    head=listEntity.del(head,6334);
     listEntity.print(head);
     listEntity.destroyList(head);
     qdebugEnd();
@@ -168,10 +233,9 @@ void testList::testInsert()
     tagNode *head=createRandList(10);
     list listEntity;
     listEntity.print(head);
-    head=listEntity.bubbleSort(head);
-    listEntity.print(head);
     tagNode *node=new tagNode;
     node->value=10;
+    node->next=NULL;
     listEntity.insert(head,node);
     listEntity.print(head);
     listEntity.destroyList(head);
@@ -195,6 +259,7 @@ tagNode *testList::createRandList(int len)
     for(int i=0;i<len;i++){
         tagNode *item=new tagNode;
         item->value=rand();
+        item->num=i;
         item->next=NULL;
         if(curr==NULL){
             curr=item;

@@ -3,6 +3,7 @@
 
 struct tagNode{
     int value;
+    int num;
     tagNode *next;
 };
 namespace ns_list{

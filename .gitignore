@@ -14,3 +14,4 @@ try/testCode/ui_dir_win32/
 try/testWidget/debug/
 try/testWidget/release/
 try/testWidget/ui_dir_win32/
+outPut/release/bin/*.exe
