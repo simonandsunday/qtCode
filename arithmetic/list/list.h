@@ -21,6 +21,7 @@ private:
     void testDestroyList();
     void testInsert();
     void testPrint();
+    void testPrintLots();
     tagNode *createRandList(int len);
 };
 class list
@@ -37,6 +38,7 @@ public:
     void destroyList(tagNode *head);
     tagNode *insert(tagNode *head,tagNode *node);
     void print(tagNode *head);
+    void printLots(tagNode *lHead,tagNode *pHead);
 };
 
 }

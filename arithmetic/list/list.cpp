@@ -198,6 +198,11 @@ void list::print(tagNode *head)
     return;
 }
 
+void list::printLots(tagNode *lHead, tagNode *pHead)
+{
+
+}
+
 
 
 
@@ -323,6 +328,11 @@ void testList::testPrint()
     listEntity.print(head);
     listEntity.destroyList(head);
     qdebugEnd();
+}
+
+void testList::testPrintLots()
+{
+
 }
 
 tagNode *testList::createRandList(int len)
