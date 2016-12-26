@@ -31,10 +31,12 @@ MOC_DIR = ./ui_dir_unix
 SOURCES += main.cpp\
         MainWindow.cpp \
     testqstringList.cpp \
-    testProperty.cpp
+    testProperty.cpp \
+    writeLocalfile.cpp
 
 HEADERS  += MainWindow.h \
     testqstringList.h \
-    testProperty.h
+    testProperty.h \
+    writeLocalfile.h
 
 FORMS    += MainWindow.ui

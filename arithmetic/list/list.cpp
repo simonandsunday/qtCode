@@ -31,12 +31,85 @@ tagNode *list::reverse(tagNode *head)
 
 tagNode *list::selectSort(tagNode *head)
 {
-    return NULL;
+    if(head==NULL){
+        return NULL;
+    }
+    tagNode *tHead=NULL;
+    tagNode *max=head;
+    while(max!=NULL){
+        tagNode *curr=head;
+        //find
+        while(curr!=NULL){
+            if(max->value<curr->value){
+                max=curr;
+            }else{
+                //do nothing
+            }
+            curr=curr->next;
+        }
+        //add
+        if(tHead==NULL){
+            tHead=max;
+        }else{
+            tagNode *temp=tHead;
+            while(temp->next!=NULL){
+                temp=temp->next;
+            }
+            temp->next=max;
+        }
+        //remove
+        if(head==max){
+            tagNode *headTemp=head;
+            head=head->next;
+            headTemp->next=NULL;
+        }else{
+            tagNode *temp=head;
+            while(temp->next!=max){
+                temp=temp->next;
+            }
+            temp->next=max->next;
+            max->next=NULL;
+        }
+        max=head;
+    }
+
+    return tHead;
 }
 
 tagNode *list::insertSort(tagNode *head)
 {
-    return NULL;
+    if(head==NULL){
+        return head;
+    }
+    tagNode *tHead=NULL;
+    while(head!=NULL){
+        tagNode *curr=head;
+        head=head->next;
+        curr->next=NULL;
+        //插入
+        tagNode *tCurr=tHead;
+        if(tCurr==NULL){
+            tHead=curr;
+        }else{
+            if(tCurr->value<curr->value){
+                tagNode *headTemp=tHead;
+                tHead=curr;
+                tHead->next=headTemp;
+            }else{
+                while(tCurr->next!=NULL){
+                    if(tCurr->next->value>curr->value){
+                        tCurr=tCurr->next;
+                    }else{
+                        break;
+                    }
+                }
+                tagNode *temp=tCurr->next;
+                tCurr->next=curr;
+                curr->next=temp;
+            }
+        }
+    }
+    return tHead;
 }
 
 tagNode *list::bubbleSort(tagNode *head)
@@ -133,12 +206,12 @@ testList::testList()
    //testReverse();
 
    //testSelectSort();
-   //testInsertSort();
+   testInsertSort();
    //testBubbleSort();
    //testSortInsert();
    //testDel();
    //testDestroyList();
-   testInsert();
+   //testInsert();
    //testPrint();
 }
 

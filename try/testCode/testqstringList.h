@@ -9,6 +9,7 @@ public:
     void testLength();
     void testForeach();
     void readfile();
+    void writeLocafile();
 };
 
 #endif // TESTQSTRINGLIST_H

@@ -1,7 +1,8 @@
 #include "testqstringList.h"
 #include<QStringList>
 #include<QDebug>
-
+#include<QFile>
+#define QStringLiteral QObject::tr
 testqstringList::testqstringList()
 {
     QStringList entity;
@@ -52,4 +53,21 @@ void testqstringList::readfile()
     fread(pbuf,1,len,pfile);
     pbuf[len]=0;
     fclose(pfile);
+}
+
+void testqstringList::writeLocafile()
+{
+    QFile file("d:\\testfile.xml");
+    if(!file.open(QIODevice::WriteOnly)){
+        qDebug()<<"打开文件失败";
+        return ;
+    }
+    QString xmlIn = QStringLiteral("<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n \
+                       <Param Factory=\"%1\" Device=\"KBC\" Func=\"SetCameraInfo\">\n \
+                           <ConnectInfo IP=\"%2\" Slot=\"1\" Port=\"1\" Prior=\"255\"  ServerPort=\"40000\" ></ConnectInfo>\n \
+                           <CameraInfo>\n%3\n</CameraInfo>\n \
+                       </Param>");
+    QTextStream  out(&file);
+    out<<xmlIn;
+    file.close();
 }
