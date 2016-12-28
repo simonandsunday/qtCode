@@ -22,7 +22,10 @@ private:
     void testInsert();
     void testPrint();
     void testPrintLots();
+    void testIntersect();
+    void testAddPloy();
     tagNode *createRandList(int len);
+    tagNode *createRandList(int len,int a[]);
 };
 class list
 {
@@ -37,8 +40,15 @@ public:
     tagNode *del(tagNode *head,int value);
     void destroyList(tagNode *head);
     tagNode *insert(tagNode *head,tagNode *node);
-    void print(tagNode *head);
+    void myPrint(tagNode *head);
     void printLots(tagNode *lHead,tagNode *pHead);
+    tagNode *intersect(tagNode *lHead,tagNode *pHead);
+    tagNode *Union(tagNode *lHead,tagNode *pHead);
+    tagNode *addPloy(tagNode *lhead,tagNode *phead);
+    tagNode *mutiPloy(tagNode *lhead,tagNode *phead);
+    tagNode *mutiPloy2(tagNode *lhead,tagNode *phead);
+    int pow(int x,int n);
+    bool isEven(int n);
 };
 
 }
