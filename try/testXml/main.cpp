@@ -4,6 +4,7 @@
 #include<QTextCodec>
 #include<QDebug>
 #include"InfinovaPage.h"
+#include"testForm.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -22,6 +23,7 @@ int main(int argc, char *argv[])
     page.show();
     //ns_Infinova_readXml::readXmlTest::testReadFile();
     qDebug()<<__func__<<__LINE__<<"中文";
-
+    //testForm test;
+    //test.show();
     return a.exec();
 }

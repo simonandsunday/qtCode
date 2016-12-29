@@ -2,4 +2,5 @@ TEMPLATE = subdirs
 SUBDIRS += \
 testCode \
     testWidget \
-    testXml
+    testXml \
+    testPtr

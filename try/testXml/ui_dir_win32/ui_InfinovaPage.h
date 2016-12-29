@@ -48,8 +48,9 @@ public:
     QToolButton *toolButton;
     QSpacerItem *verticalSpacer;
     QWidget *widget_3;
-    QGridLayout *gridLayout_2;
+    QHBoxLayout *horizontalLayout_2;
     QTreeWidget *treeWidget;
+    QWidget *widget_info;
 
     void setupUi(QWidget *InfinovaPage)
     {
@@ -132,15 +133,22 @@ public:
 
         widget_3 = new QWidget(widget);
         widget_3->setObjectName(QString::fromUtf8("widget_3"));
-        gridLayout_2 = new QGridLayout(widget_3);
-        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        horizontalLayout_2 = new QHBoxLayout(widget_3);
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         treeWidget = new QTreeWidget(widget_3);
         QTreeWidgetItem *__qtreewidgetitem = new QTreeWidgetItem();
         __qtreewidgetitem->setText(0, QString::fromUtf8("1"));
         treeWidget->setHeaderItem(__qtreewidgetitem);
         treeWidget->setObjectName(QString::fromUtf8("treeWidget"));
+        treeWidget->setMinimumSize(QSize(250, 200));
+        treeWidget->setMaximumSize(QSize(250, 200));
 
-        gridLayout_2->addWidget(treeWidget, 0, 0, 1, 1);
+        horizontalLayout_2->addWidget(treeWidget);
+
+        widget_info = new QWidget(widget_3);
+        widget_info->setObjectName(QString::fromUtf8("widget_info"));
+
+        horizontalLayout_2->addWidget(widget_info);
 
 
         verticalLayout_2->addWidget(widget_3);

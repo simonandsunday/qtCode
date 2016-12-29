@@ -4,6 +4,7 @@
 #include<QDomDocument>
 #include<QMap>
 #include<QVariantHash>
+
 namespace ns_Infinova_readXml{
 
 
@@ -94,4 +95,7 @@ private:
 Q_DECLARE_METATYPE(ns_Infinova_readXml::AreaInfo)
 Q_DECLARE_METATYPE(ns_Infinova_readXml::DeviceInfo)
 Q_DECLARE_METATYPE(ns_Infinova_readXml::CameraInfo)
+Q_DECLARE_METATYPE(ns_Infinova_readXml::AreaInfo *)
+Q_DECLARE_METATYPE(ns_Infinova_readXml::DeviceInfo *)
+Q_DECLARE_METATYPE(ns_Infinova_readXml::CameraInfo *)
 #endif // READXML_H

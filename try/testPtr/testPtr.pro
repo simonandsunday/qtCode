@@ -1,15 +1,14 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2016-12-27T16:31:38
+# Project created by QtCreator 2016-12-29T16:26:55
 #
 #-------------------------------------------------
 
-QT       += core gui xml
+QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = testXml
-TEMPLATE = app
+TARGET = testPtr
 CONFIG(release, debug|release){
 RELDIR = release
 }else{
@@ -28,27 +27,11 @@ UI_DIR = ./ui_dir_unix
 MOC_DIR = ./ui_dir_unix
 }
 
-
 SOURCES += main.cpp\
         MainWindow.cpp \
-    readXml.cpp \
-    InfinovaPage.cpp \
-    AreaWidget.cpp \
-    DeviceWidget.cpp \
-    testForm.cpp \
-    cameraWidget.cpp
+    testPtr.cpp
 
 HEADERS  += MainWindow.h \
-    readXml.h \
-    InfinovaPage.h \
-    AreaWidget.h \
-    DeviceWidget.h \
-    testForm.h \
-    cameraWidget.h
+    testPtr.h
 
-FORMS    += MainWindow.ui \
-    InfinovaPage.ui \
-    AreaWidget.ui \
-    DeviceWidget.ui \
-    testForm.ui \
-    cameraWidget.ui
+FORMS    += MainWindow.ui

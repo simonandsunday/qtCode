@@ -110,15 +110,30 @@
       </item>
       <item>
        <widget class="QWidget" name="widget_3" native="true">
-        <layout class="QGridLayout" name="gridLayout_2">
-         <item row="0" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
           <widget class="QTreeWidget" name="treeWidget">
+           <property name="minimumSize">
+            <size>
+             <width>250</width>
+             <height>200</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>250</width>
+             <height>200</height>
+            </size>
+           </property>
            <column>
             <property name="text">
              <string notr="true">1</string>
             </property>
            </column>
           </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="widget_info" native="true"/>
          </item>
         </layout>
        </widget>

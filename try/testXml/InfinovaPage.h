@@ -23,6 +23,7 @@ public:
     };
 private slots:
     void on_toolButton_clicked();
+    void currentItemChangedSlot ( QTreeWidgetItem * current, QTreeWidgetItem * previous );
 private:
     void initTree(QMap<QString,ns_Infinova_readXml::AreaInfo *> AreaInfoMap);
     void initArea(ns_Infinova_readXml::AreaInfo *item,QTreeWidgetItem *parent);
