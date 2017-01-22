@@ -29,46 +29,11 @@ using namespace apache::thrift::server;
 #include"RpcServerCoreImplementTest.h"
 using namespace  ::MOBILE_ALARM_API;
 
-class MobileAlarmHandlerTest:public MobileAlarmIf
-{
-public:
-    MobileAlarmHandlerTest(){}
-     void AlarmTrigger(std::string& _return, const std::string& content) {
-           cout << "AlarmTrigger: "  << "\n";
-           qDebug()<<"AlarmTrigger";
-     }
-     void AlarmQueryList(std::string& _return, const std::string& content) {
-
-     }
-     void AlarmQueryDetail(std::string& _return, const std::string& content){
-
-     }
-     void AlarmReset(std::string& _return, const std::string& content){
-
-     }
-};
-
-class MobileAlarmCloneFactory:virtual public MobileAlarmIfFactory{
-public:
-    virtual ~MobileAlarmCloneFactory(){}
-    virtual MobileAlarmIf * getHandler(const TConnectionInfo &connInfo){
-           boost::shared_ptr<TSocket> sock = boost::dynamic_pointer_cast<TSocket>(connInfo.transport);
-        cout << "Incoming connection\n";
-        cout << "\tSocketInfo: "  << sock->getSocketInfo() << "\n";
-        cout << "\tPeerHost: "    << sock->getPeerHost() << "\n";
-        cout << "\tPeerAddress: " << sock->getPeerAddress() << "\n";
-        cout << "\tPeerPort: "    << sock->getPeerPort() << "\n";
-        return new MobileAlarmHandlerTest;
-    }
-    virtual void releaseHandler(MobileAlarmIf *handler){
-        delete handler;
-    }
-};
-
 int main(int argc, char *argv[]){
     QCoreApplication a(argc, argv);
 
     RpcServerCoreImplementTest test;
     test.startRpcServerCore(9022);
+    //test.startRpcServerCore(8977);
     return a.exec();
 }
