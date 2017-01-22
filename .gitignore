@@ -19,3 +19,6 @@ try/testXml/ui_dir_win32/
 try/testXml/release/*
 try/testXml/object_script.testXml.*
 try/testPtr/release/*
+functionModule/JsonToHash/debug/*
+functionModule/JsonToHash/release/*
+functionModule/Makefile*
