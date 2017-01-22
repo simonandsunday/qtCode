@@ -3,4 +3,5 @@ SUBDIRS += \
 testCode \
     testWidget \
     testXml \
-    testPtr
+    testPtr \
+    NVS

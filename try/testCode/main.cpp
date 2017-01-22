@@ -6,6 +6,7 @@
 #include<QDebug>
 #include<QMetaProperty>
 #include<QTextCodec>
+#include"testMap.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -18,7 +19,9 @@ int main(int argc, char *argv[])
 #endif
     MainWindow w;
     w.show();
-    testqstringList entity;
-    entity.writeLocafile();
+    //testqstringList entity;
+    //entity.writeLocafile();
+    testMap entity;
+    entity.test();
     return a.exec();
 }

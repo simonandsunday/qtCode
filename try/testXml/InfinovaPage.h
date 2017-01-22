@@ -4,6 +4,8 @@
 #include <QWidget>
 #include<QTreeWidget>
 #include"readXml.h"
+#define Infinova_tree_Item_data_role (Qt::SizeHintRole+1000)
+#define Infinova_tree_Item_type_role (Qt::SizeHintRole+1001)
 namespace Ui {
 class InfinovaPage;
 }
@@ -21,6 +23,7 @@ public:
         deviceInfo_type,
         cameraInfo_type
     };
+    QTreeWidget *getTreeWidget();
 private slots:
     void on_toolButton_clicked();
     void currentItemChangedSlot ( QTreeWidgetItem * current, QTreeWidgetItem * previous );

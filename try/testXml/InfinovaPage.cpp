@@ -6,8 +6,7 @@
 #include"AreaWidget.h"
 #include"DeviceWidget.h"
 #include"cameraWidget.h"
-#define Infinova_tree_Item_data_role (Qt::SizeHintRole+1000)
-#define Infinova_tree_Item_type_role (Qt::SizeHintRole+1001)
+
 #define qDebugEx() qDebug()<<__func__<<__LINE__
 InfinovaPage::InfinovaPage(QWidget *parent) :
     QWidget(parent),
@@ -23,6 +22,11 @@ InfinovaPage::InfinovaPage(QWidget *parent) :
 InfinovaPage::~InfinovaPage()
 {
     delete ui;
+}
+
+QTreeWidget *InfinovaPage::getTreeWidget()
+{
+    return ui->treeWidget;
 }
 
 void InfinovaPage::on_toolButton_clicked()

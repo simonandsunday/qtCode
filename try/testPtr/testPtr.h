@@ -12,7 +12,12 @@ public:
     void hello();
 private:
     int m_data;
+    QList<std::tr1::shared_ptr<itemClass*> > m_test;
 };
+typedef struct __tagNode{
+    int id;
+    QList<std::tr1::shared_ptr<__tagNode> > nodeList;
+}tagNode;
 class testPtr
 {
 public:
@@ -29,6 +34,7 @@ private:
     void test_shared_ptr_1();
     std::tr1::shared_ptr<itemClass> test_shared_ptr2();
    // QList<int> m_list;
+
     QList<std::tr1::shared_ptr<itemClass> > m_list;
 };
 }

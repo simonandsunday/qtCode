@@ -1,6 +1,7 @@
 #ifndef TESTPROPERTY_H
 #define TESTPROPERTY_H
 #include<QObject>
+
 class testProperty:public QObject
 {
     Q_OBJECT

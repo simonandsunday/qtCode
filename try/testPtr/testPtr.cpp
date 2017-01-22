@@ -34,6 +34,7 @@ void testPtr::test_shared_ptr()
         qdebugex()<<"i:"<<i;
         data->hello();
     }
+    m_list.clear();
 }
 
 void testPtr::test_auto_ptr_1()

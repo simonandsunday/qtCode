@@ -32,11 +32,13 @@ SOURCES += main.cpp\
         MainWindow.cpp \
     testqstringList.cpp \
     testProperty.cpp \
-    writeLocalfile.cpp
+    writeLocalfile.cpp \
+    testMap.cpp
 
 HEADERS  += MainWindow.h \
     testqstringList.h \
     testProperty.h \
-    writeLocalfile.h
+    writeLocalfile.h \
+    testMap.h
 
 FORMS    += MainWindow.ui
