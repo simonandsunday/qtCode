@@ -1,0 +1,15 @@
+INPUT(
+./release\RpcClient.o
+./release\main.o
+./release\RpcClientCore.o
+./release\RpcClientHandler.o
+./release\GetTimeOfDay.o
+./release\OverlappedSubmissionThread.o
+./release\SocketPair.o
+./release\TWinsockSingleton.o
+./release\WinFcntl.o
+./release\MobileAlarm.o
+./release\MobileAlarmAPI_constants.o
+./release\MobileAlarmAPI_types.o
+./release\JsonToHash.o
+);

@@ -1,0 +1,13 @@
+INPUT(
+./debug\main.o
+./debug\MainWindow.o
+./debug\GetTimeOfDay.o
+./debug\OverlappedSubmissionThread.o
+./debug\SocketPair.o
+./debug\TWinsockSingleton.o
+./debug\WinFcntl.o
+./debug\MobileAlarm.o
+./debug\MobileAlarmAPI_constants.o
+./debug\MobileAlarmAPI_types.o
+./debug\moc_MainWindow.o
+);

@@ -1,0 +1,15 @@
+INPUT(
+./debug\RpcClient.o
+./debug\main.o
+./debug\RpcClientCore.o
+./debug\RpcClientHandler.o
+./debug\GetTimeOfDay.o
+./debug\OverlappedSubmissionThread.o
+./debug\SocketPair.o
+./debug\TWinsockSingleton.o
+./debug\WinFcntl.o
+./debug\MobileAlarm.o
+./debug\MobileAlarmAPI_constants.o
+./debug\MobileAlarmAPI_types.o
+./debug\JsonToHash.o
+);

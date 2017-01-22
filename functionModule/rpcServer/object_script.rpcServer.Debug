@@ -1,0 +1,16 @@
+INPUT(
+./debug\RpcServer.o
+./debug\main.o
+./debug\RpcServerCoreImplementTest.o
+./debug\RpcServerCore.o
+./debug\RpcServerHandler.o
+./debug\GetTimeOfDay.o
+./debug\OverlappedSubmissionThread.o
+./debug\SocketPair.o
+./debug\TWinsockSingleton.o
+./debug\WinFcntl.o
+./debug\MobileAlarm.o
+./debug\MobileAlarmAPI_constants.o
+./debug\MobileAlarmAPI_types.o
+./debug\moc_RpcServerCore.o
+);
