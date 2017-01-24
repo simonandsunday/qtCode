@@ -1,13 +1,23 @@
 #include "RpcServerCore.h"
 #include"RpcServerHandler.h"
+#include"MobileAlarmHandler.h"
 #include<QDebug>
-RpcServerCore::RpcServerCore(QObject *parent):
+#include"HanderInterface.h"
+RpcServerCore::RpcServerCore(handerMode mode,QObject *parent):
     QThread(parent),
     m_rpcServerHander(NULL),
     m_serverPort(8978)
 {
-    m_rpcServerHander=new RpcServerHandler;
-    m_rpcServerHander->setRpcServerCore(this);
+    //
+    m_mode=mode;
+    if(m_mode==handerMode_RpcServer){
+        m_rpcServerHander=new RpcServerHandler;
+    }else if(m_mode==handerMode_MobileAlarm){
+        m_rpcServerHander=new MobileAlarmHandler;
+    }
+    if(m_rpcServerHander!=NULL){
+        m_rpcServerHander->setRpcServerCore(this);
+    }
 }
 
 RpcServerCore::~RpcServerCore()
@@ -35,12 +45,16 @@ bool RpcServerCore::startRpcServerCore(quint16 serverPort)
 
 void RpcServerCore::stopThread()
 {
-    m_stop = true;
-    m_rpcServerHander->StopRPCServer();
-    QThread::wait();
+    if(m_rpcServerHander!=NULL){
+        m_stop = true;
+        m_rpcServerHander->StopRPCServer();
+        QThread::wait();
+    }
 }
 
 void RpcServerCore::run()
 {
-    m_rpcServerHander->StartRPCServer(m_serverPort);
+    if(m_rpcServerHander!=NULL){
+        m_rpcServerHander->StartRPCServer(m_serverPort);
+    }
 }

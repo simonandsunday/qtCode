@@ -39,12 +39,17 @@ unix {
 
 SOURCES += RpcServer.cpp \
     main.cpp \
-    RpcServerCoreImplementTest.cpp
+    RpcServerCoreImplementTest.cpp \
+    testRpcServer.cpp
 
 HEADERS += RpcServer.h\
         rpcserver_global.h \
-    RpcServerCoreImplementTest.h
+    RpcServerCoreImplementTest.h \
+    testRpcServer.h \
+    RestfulFunctionId.h
 
 
 include($$PWD/rpcServer.pri)
-
+include($$PWD/../log/log.pri)
+include($$PWD/../DatabaseModule/DatabaseModule.pri)
+include($$PWD/../JsonToHash/JsonToHash.pri)

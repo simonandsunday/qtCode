@@ -12,4 +12,14 @@ HEADERS += \
 
 include($$PWD/../thrift/thrift.pri)
 
+HEADERS += \
+    $$PWD/MobileAlarmHandler.h \
+    $$PWD/HanderInterface.h
+
+SOURCES += \
+    $$PWD/MobileAlarmHandler.cpp \
+    $$PWD/HanderInterface.cpp
 }
+
+
+

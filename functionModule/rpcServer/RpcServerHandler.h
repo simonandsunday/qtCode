@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include "MobileAlarm.h"
+#include"HanderInterface.h"
 namespace apache
 {
 namespace thrift
@@ -15,7 +16,7 @@ class TThreadPoolServer;
 }
 class RpcServerCore;
 //class TThreadPoolServer;
-class RpcServerHandler : virtual public MOBILE_ALARM_API::MobileAlarmIf
+class RpcServerHandler : virtual public MOBILE_ALARM_API::MobileAlarmIf,virtual public HanderInterface
 {
 public:
     RpcServerHandler();
@@ -35,6 +36,7 @@ protected:
     friend class RpcServerCore;
 
     apache::thrift::server::TThreadPoolServer *m_rpcServer;
+
 };
 
 #endif // RPCSERVERHANDLER_H

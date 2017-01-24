@@ -2,6 +2,7 @@ INPUT(
 ./release\RpcServer.o
 ./release\main.o
 ./release\RpcServerCoreImplementTest.o
+./release\testRpcServer.o
 ./release\RpcServerCore.o
 ./release\RpcServerHandler.o
 ./release\GetTimeOfDay.o
@@ -12,5 +13,11 @@ INPUT(
 ./release\MobileAlarm.o
 ./release\MobileAlarmAPI_constants.o
 ./release\MobileAlarmAPI_types.o
+./release\MobileAlarmHandler.o
+./release\HanderInterface.o
+./release\avt_base_log.o
+./release\DatabaseMoudle.o
+./release\testDatabase.o
+./release\JsonToHash.o
 ./release\moc_RpcServerCore.o
 );
